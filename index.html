@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Login con Múltiples Páginas</title>
+  <title>Login Tany Servidores</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -54,7 +54,7 @@
 <body>
 
 <div class="login-container" id="login-box">
-  <h2>Iniciar Sesión</h2>
+  <h2>Bienvenido a TanyStudy </h2>
   <input type="text" id="username" placeholder="Usuario">
   <input type="password" id="password" placeholder="Contraseña">
   <button onclick="login()">Entrar</button>
@@ -62,22 +62,22 @@
 </div>
 
 <div class="content hidden" id="content-box">
-  <h2>Bienvenido</h2>
+  <h2>Tany Study</h2>
   <div class="nav">
-    <button onclick="mostrarSeccion('intro')">Introducción</button>
-    <button onclick="mostrarSeccion('desarrollo')">Desarrollo</button>
-    <button onclick="mostrarSeccion('final')">Final</button>
-    <button onclick="mostrarSeccion('cierre')">Cierre</button>
+    <button onclick="mostrarSeccion('intro')">Algebra</button>
+    <button onclick="mostrarSeccion('desarrollo')">Geometria</button>
+    <button onclick="mostrarSeccion('final')">Aritmetica</button>
+    <button onclick="mostrarSeccion('cierre')">Razonamiento Matematico</button>
   </div>
 
   <!-- Secciones -->
   <div id="intro" class="section active">
-    <h3>Introducción</h3>
+    <h3>Algebra</h3>
     <p>Bienvenido a la sección de introducción. Aquí damos una visión general del contenido protegido.</p>
   </div>
 
   <div id="desarrollo" class="section">
-    <h3>Desarrollo</h3>
+    <h3>Geometria</h3>
     <p>Esta sección contiene el contenido principal del proyecto o presentación.</p>
     <ul>
       <li>Análisis de situación</li>
@@ -87,19 +87,19 @@
   </div>
 
   <div id="final" class="section">
-    <h3>Final</h3>
+    <h3>Aritmetica</h3>
     <p>Aquí se presentan las conclusiones o resultados finales del trabajo.</p>
     <img src="https://via.placeholder.com/300x150" alt="Gráfico final">
   </div>
 
   <div id="cierre" class="section">
-    <h3>Cierre</h3>
+    <h3>Razonamiento Matematico</h3>
     <p>Gracias por participar. En esta sección se hace un resumen y se plantean próximos pasos.</p>
     <a href="https://www.ejemplo.com" target="_blank">Ir al sitio principal</a>
   </div>
 
   <br>
-  <button onclick="logout()">Cerrar sesión</button>
+  <button onclick="logout()">Cierrame</button>
 </div>
 
 <script>
@@ -108,7 +108,7 @@
     const pass = document.getElementById("password").value;
     const error = document.getElementById("error");
 
-    if (user === "admin" && pass === "1234") {
+    if (user === "Sergio" && pass === "12345") {
       document.getElementById("login-box").classList.add("hidden");
       document.getElementById("content-box").classList.remove("hidden");
       error.textContent = "";
