@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login con Múltiples Páginas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container, .content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+    input, button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .nav button {
+      flex: 1;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container" id="login-box">
+  <h2>Iniciar Sesión</h2>
+  <input type="text" id="username" placeholder="Usuario">
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="login()">Entrar</button>
+  <p id="error" style="color: red;"></p>
+</div>
+
+<div class="content hidden" id="content-box">
+  <h2>Bienvenido</h2>
+  <div class="nav">
+    <button onclick="mostrarSeccion('intro')">Introducción</button>
+    <button onclick="mostrarSeccion('desarrollo')">Desarrollo</button>
+    <button onclick="mostrarSeccion('final')">Final</button>
+    <button onclick="mostrarSeccion('cierre')">Cierre</button>
+  </div>
+
+  <!-- Secciones -->
+  <div id="intro" class="section active">
+    <h3>Introducción</h3>
+    <p>Bienvenido a la sección de introducción. Aquí damos una visión general del contenido protegido.</p>
+  </div>
+
+  <div id="desarrollo" class="section">
+    <h3>Desarrollo</h3>
+    <p>Esta sección contiene el contenido principal del proyecto o presentación.</p>
+    <ul>
+      <li>Análisis de situación</li>
+      <li>Desarrollo de ideas</li>
+      <li>Resultados preliminares</li>
+    </ul>
+  </div>
+
+  <div id="final" class="section">
+    <h3>Final</h3>
+    <p>Aquí se presentan las conclusiones o resultados finales del trabajo.</p>
+    <img src="https://via.placeholder.com/300x150" alt="Gráfico final">
+  </div>
+
+  <div id="cierre" class="section">
+    <h3>Cierre</h3>
+    <p>Gracias por participar. En esta sección se hace un resumen y se plantean próximos pasos.</p>
+    <a href="https://www.ejemplo.com" target="_blank">Ir al sitio principal</a>
+  </div>
+
+  <br>
+  <button onclick="logout()">Cerrar sesión</button>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (user === "admin" && pass === "1234") {
+      document.getElementById("login-box").classList.add("hidden");
+      document.getElementById("content-box").classList.remove("hidden");
+      error.textContent = "";
+    } else {
+      error.textContent = "Usuario o contraseña incorrectos.";
+    }
+  }
+
+  function logout() {
+    document.getElementById("login-box").classList.remove("hidden");
+    document.getElementById("content-box").classList.add("hidden");
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  }
+
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll(".section");
+    secciones.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
