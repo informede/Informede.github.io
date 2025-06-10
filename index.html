@@ -49,6 +49,18 @@
     .section.active {
       display: block;
     }
+    /* Estilos para subsecciones dentro de Álgebra */
+    .subsection {
+      display: none;
+      margin-top: 10px;
+    }
+    .subsection.active {
+      display: block;
+    }
+    /* Para que los botones dentro de Álgebra puedan ir a la siguiente línea si hace falta */
+    #intro .nav {
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
@@ -72,12 +84,72 @@
 
   <!-- Secciones -->
   <div id="intro" class="section active">
-    <h3>Algebra</h3>
-    <p>Bienvenido a la sección de introducción. Aquí damos una visión general del contenido protegido.</p>
+    <h3>Álgebra</h3>
+
+    <div class="nav" style="flex-wrap: wrap;">
+      <button onclick="mostrarSubtema('algebra-inicio')">Inicio</button>
+      <button onclick="mostrarSubtema('expresiones')">Expresiones</button>
+      <button onclick="mostrarSubtema('ecuaciones')">Ecuaciones</button>
+      <button onclick="mostrarSubtema('desigualdades')">Desigualdades</button>
+      <button onclick="mostrarSubtema('funciones')">Funciones</button>
+      <button onclick="mostrarSubtema('polinomios')">Polinomios</button>
+      <button onclick="mostrarSubtema('factorizacion')">Factorización</button>
+      <button onclick="mostrarSubtema('sistemas')">Sistemas de ecuaciones</button>
+      <button onclick="mostrarSubtema('complejos')">Números complejos</button>
+    </div>
+
+    <!-- Subsecciones de Álgebra -->
+    <div id="algebra-inicio" class="subsection active">
+      <h4>Inicio de Álgebra</h4>
+      <p>Álgebra es una rama fundamental de las matemáticas que usa símbolos para generalizar operaciones. Aquí se estudian conceptos clave que te ayudarán a resolver problemas de forma lógica.</p>
+    </div>
+
+    <div id="expresiones" class="subsection">
+      <h4>Expresiones Algebraicas</h4>
+      <p>Las expresiones algebraicas combinan números, letras (variables) y operaciones. Ejemplo: \( 3x + 5 \)</p>
+    </div>
+
+    <div id="ecuaciones" class="subsection">
+      <h4>Ecuaciones</h4>
+      <p>Una ecuación es una igualdad entre dos expresiones. Ejemplo: \( x + 2 = 5 \)</p>
+    </div>
+
+    <div id="desigualdades" class="subsection">
+      <h4>Desigualdades</h4>
+      <p>Relaciones donde las expresiones no son iguales. Ejemplo: \( x > 3 \)</p>
+    </div>
+
+    <div id="funciones" class="subsection">
+      <h4>Funciones</h4>
+      <p>Una función asocia un valor de entrada con un único valor de salida. Ejemplo: \( f(x) = x^2 \)</p>
+    </div>
+
+    <div id="polinomios" class="subsection">
+      <h4>Polinomios</h4>
+      <p>Son expresiones algebraicas compuestas por sumas y restas de términos. Ejemplo: \( x^2 + 3x - 4 \)</p>
+    </div>
+
+    <div id="factorizacion" class="subsection">
+      <h4>Factorización</h4>
+      <p>Proceso para expresar un polinomio como producto de factores. Ejemplo: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+    </div>
+
+    <div id="sistemas" class="subsection">
+      <h4>Sistemas de Ecuaciones</h4>
+      <p>Conjunto de ecuaciones que deben cumplirse simultáneamente. Ejemplo:  
+        \( x + y = 3 \),  
+        \( x - y = 1 \)
+      </p>
+    </div>
+
+    <div id="complejos" class="subsection">
+      <h4>Números Complejos</h4>
+      <p>Incluyen una parte real y una imaginaria. Ejemplo: \( 2 + 3i \)</p>
+    </div>
   </div>
 
   <div id="desarrollo" class="section">
-    <h3>Geometria</h3>
+    <h3>Geometría</h3>
     <p>Esta sección contiene el contenido principal del proyecto o presentación.</p>
     <ul>
       <li>Análisis de situación</li>
@@ -87,19 +159,19 @@
   </div>
 
   <div id="final" class="section">
-    <h3>Aritmetica</h3>
+    <h3>Aritmética</h3>
     <p>Aquí se presentan las conclusiones o resultados finales del trabajo.</p>
     <img src="https://via.placeholder.com/300x150" alt="Gráfico final">
   </div>
 
   <div id="cierre" class="section">
-    <h3>Razonamiento Matematico</h3>
+    <h3>Razonamiento Matemático</h3>
     <p>Gracias por participar. En esta sección se hace un resumen y se plantean próximos pasos.</p>
     <a href="https://www.ejemplo.com" target="_blank">Ir al sitio principal</a>
   </div>
 
   <br>
-  <button onclick="logout()">Cierrame</button>
+  <button onclick="logout()">Ciérrame</button>
 </div>
 
 <script>
@@ -129,7 +201,14 @@
     secciones.forEach(sec => sec.classList.remove("active"));
     document.getElementById(id).classList.add("active");
   }
+
+  function mostrarSubtema(id) {
+    const subtemas = document.querySelectorAll("#intro .subsection");
+    subtemas.forEach(sub => sub.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
 </script>
 
 </body>
 </html>
+
