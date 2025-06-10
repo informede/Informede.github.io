@@ -87,190 +87,67 @@
     <h3>Álgebra</h3>
 
     <div class="nav" style="flex-wrap: wrap;">
-      <button onclick="mostrarSubtema('algebra-inicio')">Inicio</button>
-      <button onclick="mostrarSubtema('expresiones')">Expresiones</button>
-      <button onclick="mostrarSubtema('ecuaciones')">Ecuaciones</button>
-      <button onclick="mostrarSubtema('desigualdades')">Desigualdades</button>
-      <button onclick="mostrarSubtema('funciones')">Funciones</button>
-      <button onclick="mostrarSubtema('polinomios')">Polinomios</button>
-      <button onclick="mostrarSubtema('factorizacion')">Factorización</button>
-      <button onclick="mostrarSubtema('sistemas')">Sistemas de ecuaciones</button>
-      <button onclick="mostrarSubtema('complejos')">Números complejos</button>
+      <button onclick="mostrarSubtema('algebra-inicio')">EXPRESIONES ALGEBRAICAS</button>
+      <button onclick="mostrarSubtema('expresiones')">TERMINOS SEMEJANTES</button>
+      <button onclick="mostrarSubtema('ecuaciones')">ECUACIONES BASICAS</button>
+      <button onclick="mostrarSubtema('desigualdades')">SISTEMA DE ECUACIONES ELEMENTALES</button>
+      <button onclick="mostrarSubtema('funciones')">TEORIA DE EXPONENTES</button>
+      <button onclick="mostrarSubtema('polinomios')">LEYES DE LA RADICACIÓN</button>
+      <button onclick="mostrarSubtema('factorizacion')">ECUACIONES EXPONENCIALES</button>
+      <button onclick="mostrarSubtema('sistemas')">NOTACIÓN POLINOMICA VALOR NÚMERICO</button>
+      <button onclick="mostrarSubtema('complejos')">GRADOS</button>
     </div>
 
     <!-- Subsecciones de Álgebra -->
     <div id="algebra-inicio" class="subsection active">
-      <ul id="menuSubpaginas">
-    <li><a onclick="mostrarContenido('expresionesAlgebraicasResueltas')">Ver EXPRESIONES ALGEBRAICAS RESUELTAS</a></li>
-    <li><a onclick="mostrarContenido('terminosSemejantes')">Ver TÉRMINOS SEMEJANTES</a></li>
-    <li><a onclick="mostrarContenido('resolucionEcuacionesBasicas')">Ver RESOLUCIÓN DE ECUACIONES BÁSICAS</a></li>
-    <li><a onclick="mostrarContenido('sistemasEcuacionesElementales')">Ver SISTEMAS DE ECUACIONES ELEMENTALES</a></li>
-    <li><a onclick="mostrarContenido('teoriaExponentes')">Ver TEORÍA DE EXPONENTES</a></li>
-    <li><a onclick="mostrarContenido('leyesRadicacion')">Ver LEYES DE LA RADICACIÓN</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesExponenciales')">Ver ECUACIONES EXPONENCIALES</a></li>
-    <li><a onclick="mostrarContenido('notacionPolinomicaValorNumerico')">Ver NOTACIÓN POLINÓMICA VALOR NUMÉRICO</a></li>
-    <li><a onclick="mostrarContenido('grados')">Ver GRADOS</a></li>
-    <li><a onclick="mostrarContenido('polinomiosEspeciales')">Ver POLINOMIOS ESPECIALES</a></li>
-    <li><a onclick="mostrarContenido('gradosYPolinomios')">Ver GRADOS Y POLINOMIOS</a></li>
-    <li><a onclick="mostrarContenido('operacionesConPolinomios')">Ver OPERACIONES CON POLINOMIOS</a></li>
-    <li><a onclick="mostrarContenido('multiplicacionAlgebraica')">Ver MULTIPLICACIÓN ALGEBRAICA</a></li>
-    <li><a onclick="mostrarContenido('productosNotables')">Ver PRODUCTOS NOTABLES</a></li>
-    <li><a onclick="mostrarContenido('metodoHornerParaDividirPolinomios')">Ver MÉTODO DE HORNER PARA DIVIDIR POLINOMIOS</a></li>
-    <li><a onclick="mostrarContenido('divisionDePolinomios')">Ver DIVISIÓN DE POLINOMIOS</a></li>
-    <li><a onclick="mostrarContenido('cocientesNotables')">Ver COCIENTES NOTABLES</a></li>
-    <li><a onclick="mostrarContenido('factorizacion')">Ver FACTORIZACIÓN</a></li>
-    <li><a onclick="mostrarContenido('mcdYMcm')">Ver MCD Y MCM</a></li>
-    <li><a onclick="mostrarContenido('fraccionesAlgebraicas')">Ver FRACCIONES ALGEBRAICAS</a></li>
-    <li><a onclick="mostrarContenido('radicalesDobles')">Ver RADICALES DOBLES</a></li>
-    <li><a onclick="mostrarContenido('racionalizacion')">Ver RACIONALIZACIÓN</a></li>
-    <li><a onclick="mostrarContenido('factorialDeUnNumero')">Ver FACTORIAL DE UN NÚMERO</a></li>
-    <li><a onclick="mostrarContenido('numeroCombinatorio')">Ver NÚMERO COMBINATORIO</a></li>
-    <li><a onclick="mostrarContenido('binomioDeNewton')">Ver BINOMIO DE NEWTON</a></li>
-    <li><a onclick="mostrarContenido('unidadImaginaria')">Ver UNIDAD IMAGINARIA</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesPrimerGrado')">Ver ECUACIONES DE PRIMER GRADO</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesSegundoGrado')">Ver ECUACIONES DE SEGUNDO GRADO</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesConFracciones')">Ver ECUACIONES CON FRACCIONES</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesConRadicales')">Ver ECUACIONES CON RADICALES</a></li>
-    <li><a onclick="mostrarContenido('planteoDeEcuaciones')">Ver PLANTEO DE ECUACIONES</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesBicuadradas')">Ver ECUACIONES BICUADRADAS</a></li>
-    <li><a onclick="mostrarContenido('ecuacionCubica')">Ver ECUACIÓN CÚBICA</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesFraccionarias')">Ver ECUACIONES FRACCIONARIAS</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesIrracionales')">Ver ECUACIONES IRRACIONALES</a></li>
-    <li><a onclick="mostrarContenido('sistemaDeEcuaciones')">Ver SISTEMA DE ECUACIONES</a></li>
-    <li><a onclick="mostrarContenido('inecuaciones')">Ver INECUACIONES</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesPrimerGrado')">Ver INECUACIONES DE PRIMER GRADO</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesSegundoGrado')">Ver INECUACIONES DE SEGUNDO GRADO</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesGradoSuperior')">Ver INECUACIONES DE GRADO SUPERIOR</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesFraccionarias')">Ver INECUACIONES FRACCIONARIAS</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesIrracionales')">Ver INECUACIONES IRRACIONALES</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesExponenciales')">Ver INECUACIONES EXPONENCIALES</a></li>
-    <li><a onclick="mostrarContenido('sistemaDeInecuaciones')">Ver SISTEMA DE INECUACIONES</a></li>
-    <li><a onclick="mostrarContenido('programacionLineal')">Ver PROGRAMACIÓN LINEAL</a></li>
-    <li><a onclick="mostrarContenido('valorAbsoluto')">Ver VALOR ABSOLUTO</a></li>
-    <li><a onclick="mostrarContenido('ecuacionesConValorAbsoluto')">Ver ECUACIONES CON VALOR ABSOLUTO</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesConValorAbsoluto')">Ver INECUACIONES CON VALOR ABSOLUTO</a></li>
-    <li><a onclick="mostrarContenido('progresionesAritmeticas')">Ver PROGRESIONES ARITMÉTICAS</a></li>
-    <li><a onclick="mostrarContenido('progresionesGeometricas')">Ver PROGRESIONES GEOMÉTRICAS</a></li>
-    <li><a onclick="mostrarContenido('logaritmos')">Ver LOGARITMOS</a></li>
-    <li><a onclick="mostrarContenido('logaritmosSecundaria')">Ver LOGARITMOS DE SECUNDARIA</a></li>
-    <li><a onclick="mostrarContenido('ecuacionLogaritmica')">Ver ECUACIÓN LOGARÍTMICA</a></li>
-    <li><a onclick="mostrarContenido('inecuacionesLogaritmicas')">Ver INECUACIONES LOGARÍTMICAS</a></li>
-    <li><a onclick="mostrarContenido('funciones')">Ver FUNCIONES</a></li>
-    <li><a onclick="mostrarContenido('funcionesII')">Ver FUNCIONES II</a></li>
-    <li><a onclick="mostrarContenido('examenAdmisionSanMarcos')">Ver EXAMEN ADMISIÓN SAN MARCOS</a></li>
-    <li><a onclick="mostrarContenido('examenVillarreal')">Ver EXAMEN VILLARREAL</a></li>
-    <li><a onclick="mostrarContenido('examenCatolica')">Ver EXAMEN CATÓLICA</a></li>
-    <li><a onclick="mostrarContenido('examenUNI')">Ver EXAMEN UNI</a></li>
-    <li><a onclick="mostrarContenido('examenCallao')">Ver EXAMEN CALLAO</a></li>
-    <li><a onclick="mostrarContenido('repasoProblemasResueltos')">Ver REPASO PROBLEMAS RESUELTOS</a></li>
-    <li><a onclick="mostrarContenido('repasoUNIResuelto')">Ver REPASO UNI RESUELTO</a></li>
-    <li><a onclick="mostrarContenido('relacionesMatematicas')">Ver RELACIONES MATEMÁTICAS</a></li>
-    <li><a onclick="mostrarContenido('matrices')">Ver MATRICES</a></li>
-    <li><a onclick="mostrarContenido('determinantes')">Ver DETERMINANTES</a></li>
-    <li><a onclick="mostrarContenido('derivadas')">Ver DERIVADAS</a></li>
-    <li><a onclick="mostrarContenido('reduccionTerminosSemejantes')">Ver REDUCCIÓN DE TÉRMINOS SEMEJANTES</a></li>
-    <li><a onclick="mostrarContenido('operacionesConMonomios')">Ver OPERACIONES CON MONOMIOS</a></li>
-    <li><a onclick="mostrarContenido('eliminacionSignosAgrupacion')">Ver ELIMINACIÓN DE SIGNOS DE AGRUPACIÓN</a></li>
-    <li><a onclick="mostrarContenido('relacionesBinarias')">Ver RELACIONES BINARIAS</a></li>
-    <li><a onclick="mostrarContenido('induccionMatematica')">Ver INDUCCIÓN MATEMÁTICA</a></li>
-  </ul>
+      <h4>EXPRESIONES ALGEBRAICAS</h4>
+      <p>Álgebra es una rama fundamental de las matemáticas que usa símbolos para generalizar operaciones. Aquí se estudian conceptos clave que te ayudarán a resolver problemas de forma lógica.</p>
+    </div>
 
-  <div id="contenido" class="contenido-subpagina">
-    <h3 id="tituloSubpagina">Expresiones Algebraicas Resueltas</h3>
-    <p id="textoSubpagina">
-      Aquí puedes añadir el contenido relacionado con <strong>Expresiones Algebraicas Resueltas</strong>.
-    </p>
+    <div id="expresiones" class="subsection">
+      <h4>TERMINOS SEMEJANTES</h4>
+      
+      <p>Las expresiones algebraicas combinan números, letras (variables) y operaciones. Ejemplo: \( 3x + 5 \)</p>
+    </div>
+
+    <div id="ecuaciones" class="subsection">
+      <h4>ECUACIONES BASICAS</h4>
+      <p>Una ecuación es una igualdad entre dos expresiones. Ejemplo: \( x + 2 = 5 \)</p>
+    </div>
+
+    <div id="desigualdades" class="subsection">
+      <h4>SISTEMA DE ECUACIONES ELEMENTALES</h4>
+      <p>Relaciones donde las expresiones no son iguales. Ejemplo: \( x > 3 \)</p>
+    </div>
+
+    <div id="funciones" class="subsection">
+      <h4>TEORIA DE EXPONENTES</h4>
+      <p>Una función asocia un valor de entrada con un único valor de salida. Ejemplo: \( f(x) = x^2 \)</p>
+    </div>
+
+    <div id="polinomios" class="subsection">
+      <h4>LEYES DE LA RADICACIÓN</h4>
+      <p>Son expresiones algebraicas compuestas por sumas y restas de términos. Ejemplo: \( x^2 + 3x - 4 \)</p>
+    </div>
+
+    <div id="factorizacion" class="subsection">
+      <h4>ECUACIONES EXPONENCIALES</h4>
+      <p>Proceso para expresar un polinomio como producto de factores. Ejemplo: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+    </div>
+
+    <div id="sistemas" class="subsection">
+      <h4>NOTACIÓN POLINOMICA VALOR NÚMERICO</h4>
+      <p>Conjunto de ecuaciones que deben cumplirse simultáneamente. Ejemplo:  
+        \( x + y = 3 \),  
+        \( x - y = 1 \)
+      </p>
+    </div>
+
+    <div id="complejos" class="subsection">
+      <h4>GRADOS</h4>
+      <p>Incluyen una parte real y una imaginaria. Ejemplo: \( 2 + 3i \)</p>
+    </div>
   </div>
-
-  <script>
-    // Contenidos de cada subpágina (puedes editar y ampliar)
-    const contenidos = {
-      expresionesAlgebraicasResueltas: "Aquí puedes añadir el contenido relacionado con Expresiones Algebraicas Resueltas.",
-      terminosSemejantes: "Explicación sobre términos semejantes y cómo identificarlos.",
-      resolucionEcuacionesBasicas: "Procedimiento para la resolución de ecuaciones básicas.",
-      sistemasEcuacionesElementales: "Ejemplos y métodos para resolver sistemas de ecuaciones elementales.",
-      teoriaExponentes: "Reglas y propiedades fundamentales de la teoría de exponentes.",
-      leyesRadicacion: "Descripción de las leyes y propiedades de la radicación.",
-      ecuacionesExponenciales: "Introducción y ejemplos de ecuaciones exponenciales.",
-      notacionPolinomicaValorNumerico: "Explicación sobre notación polinómica y valor numérico.",
-      grados: "Concepto y uso de grados en álgebra.",
-      polinomiosEspeciales: "Definición y ejemplos de polinomios especiales.",
-      gradosYPolinomios: "Relación entre grados y polinomios.",
-      operacionesConPolinomios: "Operaciones básicas con polinomios: suma, resta y multiplicación.",
-      multiplicacionAlgebraica: "Técnicas y ejemplos de multiplicación algebraica.",
-      productosNotables: "Descripción y ejemplos de productos notables.",
-      metodoHornerParaDividirPolinomios: "Método de Horner para la división de polinomios explicado paso a paso.",
-      divisionDePolinomios: "Procedimiento para la división de polinomios.",
-      cocientesNotables: "Explicación de cocientes notables.",
-      factorizacion: "Métodos de factorización de expresiones algebraicas.",
-      mcdYMcm: "Cómo calcular el máximo común divisor (MCD) y mínimo común múltiplo (MCM).",
-      fraccionesAlgebraicas: "Definición y simplificación de fracciones algebraicas.",
-      radicalesDobles: "Concepto de radicales dobles y ejemplos.",
-      racionalizacion: "Proceso de racionalización en álgebra.",
-      factorialDeUnNumero: "Definición y cálculo del factorial de un número.",
-      numeroCombinatorio: "Explicación sobre números combinatorios y su uso.",
-      binomioDeNewton: "Teorema del binomio de Newton y aplicaciones.",
-      unidadImaginaria: "Concepto y propiedades de la unidad imaginaria.",
-      ecuacionesPrimerGrado: "Solución y ejemplos de ecuaciones de primer grado.",
-      ecuacionesSegundoGrado: "Solución y ejemplos de ecuaciones de segundo grado.",
-      ecuacionesConFracciones: "Resolución de ecuaciones que incluyen fracciones.",
-      ecuacionesConRadicales: "Tratamiento de ecuaciones con radicales.",
-      planteoDeEcuaciones: "Cómo plantear ecuaciones para resolver problemas.",
-      ecuacionesBicuadradas: "Introducción a ecuaciones bicuadradas.",
-      ecuacionCubica: "Métodos para resolver ecuaciones cúbicas.",
-      ecuacionesFraccionarias: "Resolución de ecuaciones fraccionarias.",
-      ecuacionesIrracionales: "Resolución de ecuaciones irracionales.",
-      sistemaDeEcuaciones: "Análisis de sistemas de ecuaciones.",
-      inecuaciones: "Introducción a las inecuaciones y sus propiedades.",
-      inecuacionesPrimerGrado: "Inecuaciones de primer grado.",
-      inecuacionesSegundoGrado: "Inecuaciones de segundo grado.",
-      inecuacionesGradoSuperior: "Inecuaciones de grado superior.",
-      inecuacionesFraccionarias: "Inecuaciones fraccionarias.",
-      inecuacionesIrracionales: "Inecuaciones irracionales.",
-      inecuacionesExponenciales: "Inecuaciones exponenciales.",
-      sistemaDeInecuaciones: "Sistemas de inecuaciones.",
-      programacionLineal: "Introducción a la programación lineal.",
-      valorAbsoluto: "Concepto y propiedades del valor absoluto.",
-      ecuacionesConValorAbsoluto: "Ecuaciones que incluyen valor absoluto.",
-      inecuacionesConValorAbsoluto: "Inecuaciones con valor absoluto.",
-      progresionesAritmeticas: "Definición y ejemplos de progresiones aritméticas.",
-      progresionesGeometricas: "Definición y ejemplos de progresiones geométricas.",
-      logaritmos: "Concepto y propiedades de logaritmos.",
-      logaritmosSecundaria: "Logaritmos para nivel secundaria.",
-      ecuacionLogaritmica: "Resolución de ecuaciones logarítmicas.",
-      inecuacionesLogaritmicas: "Inecuaciones logarítmicas.",
-      funciones: "Introducción a funciones.",
-      funcionesII: "Funciones avanzadas.",
-      examenAdmisionSanMarcos: "Ejemplos y soluciones de examen de admisión San Marcos.",
-      examenVillarreal: "Ejemplos y soluciones de examen Villarreal.",
-      examenCatolica: "Ejemplos y soluciones de examen Católica.",
-      examenUNI: "Ejemplos y soluciones de examen UNI.",
-      examenCallao: "Ejemplos y soluciones de examen Callao.",
-      repasoProblemasResueltos: "Repaso de problemas resueltos.",
-      repasoUNIResuelto: "Repaso de exámenes UNI resueltos.",
-      relacionesMatematicas: "Concepto de relaciones matemáticas.",
-      matrices: "Introducción a matrices.",
-      determinantes: "Introducción a determinantes.",
-      derivadas: "Concepto básico de derivadas.",
-      reduccionTerminosSemejantes: "Reducción de términos semejantes.",
-      operacionesConMonomios: "Operaciones con monomios.",
-      eliminacionSignosAgrupacion: "Eliminación de signos de agrupación.",
-      relacionesBinarias: "Relaciones binarias en matemáticas.",
-      induccionMatematica: "Principio de inducción matemática."
-    };
-
-    function mostrarContenido(id) {
-      const titulo = document.getElementById('tituloSubpagina');
-      const texto = document.getElementById('textoSubpagina');
-
-      // Formatear título para mostrar bonito
-      let tituloTexto = id.replace(/([A-Z])/g, ' $1').trim();
-      tituloTexto = tituloTexto.charAt(0).toUpperCase() + tituloTexto.slice(1);
-
-      titulo.textContent = tituloTexto;
-      texto.textContent = contenidos[id] || "Contenido aún no disponible para este tema.";
-    }
-  </script>
 
   <div id="desarrollo" class="section">
     <h3>Geometría</h3>
@@ -335,4 +212,5 @@
 
 </body>
 </html>
+
 
